@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CEIS209_PayRoll_Project
 {
-    public partial class Form1
+    public partial class MainForm
     {
         private void MB(string Text, string Title, MessageBoxIcon ICON)
         {
