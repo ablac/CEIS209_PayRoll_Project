@@ -1,6 +1,6 @@
 ﻿namespace CEIS209_PayRoll_Project
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,123 +28,126 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.EmployeesListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PrintPaychecksButton = new System.Windows.Forms.Button();
+            this.DisplayButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // EmployeesListBox
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(521, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(707, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(893, 50);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(1079, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 48);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 37);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Payroll System";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 37);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "CEIS 209";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(259, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 37);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Keith Swoger";
+            this.EmployeesListBox.FormattingEnabled = true;
+            this.EmployeesListBox.ItemHeight = 20;
+            this.EmployeesListBox.Location = new System.Drawing.Point(22, 120);
+            this.EmployeesListBox.Name = "EmployeesListBox";
+            this.EmployeesListBox.Size = new System.Drawing.Size(1289, 564);
+            this.EmployeesListBox.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(259, 61);
+            this.label4.Location = new System.Drawing.Point(263, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(256, 37);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 16;
             this.label4.Text = "November 2021";
             // 
-            // listBox1
+            // label3
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(18, 135);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1289, 564);
-            this.listBox1.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(263, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 37);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Keith Swoger";
             // 
-            // MainForm
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 37);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "CEIS 209";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 37);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Payroll System";
+            // 
+            // PrintPaychecksButton
+            // 
+            this.PrintPaychecksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.PrintPaychecksButton.Location = new System.Drawing.Point(1083, 35);
+            this.PrintPaychecksButton.Name = "PrintPaychecksButton";
+            this.PrintPaychecksButton.Size = new System.Drawing.Size(180, 48);
+            this.PrintPaychecksButton.TabIndex = 12;
+            this.PrintPaychecksButton.Text = "Print";
+            this.PrintPaychecksButton.UseVisualStyleBackColor = true;
+            this.PrintPaychecksButton.Click += new System.EventHandler(this.PrintPaychecksButton_Click);
+            // 
+            // DisplayButton
+            // 
+            this.DisplayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.DisplayButton.Location = new System.Drawing.Point(897, 35);
+            this.DisplayButton.Name = "DisplayButton";
+            this.DisplayButton.Size = new System.Drawing.Size(180, 48);
+            this.DisplayButton.TabIndex = 11;
+            this.DisplayButton.Text = "Display";
+            this.DisplayButton.UseVisualStyleBackColor = true;
+            this.DisplayButton.Click += new System.EventHandler(this.DisplayButton_Click);
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.RemoveButton.Location = new System.Drawing.Point(711, 35);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(180, 48);
+            this.RemoveButton.TabIndex = 10;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Location = new System.Drawing.Point(525, 35);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(180, 48);
+            this.AddButton.TabIndex = 9;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 725);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(1328, 699);
+            this.Controls.Add(this.EmployeesListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "MainForm";
-            this.Text = "Payroll System";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.PrintPaychecksButton);
+            this.Controls.Add(this.DisplayButton);
+            this.Controls.Add(this.RemoveButton);
+            this.Controls.Add(this.AddButton);
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,15 +155,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox EmployeesListBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button PrintPaychecksButton;
+        private System.Windows.Forms.Button DisplayButton;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button AddButton;
     }
 }
 

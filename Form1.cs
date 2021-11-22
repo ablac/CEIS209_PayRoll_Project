@@ -10,16 +10,37 @@ using System.Windows.Forms;
 
 namespace CEIS209_PayRoll_Project
 {
-    public partial class MainForm : Form
+    public partial class Form1 : Form
     {
-        public MainForm()
+        public Form1()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
-
+            //Add item to the employee listbox
+            EmployeesListBox.Items.Add("New Employee");
+        }
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            //Remove the selected item from the employee listbox
+            int itemNumber = EmployeesListBox.SelectedIndex;
+            if(itemNumber > -1)
+            {
+                EmployeesListBox.Items.RemoveAt(itemNumber);
+            }
+            else
+            {
+                MB("Please Selecte employee to remove.", "Error!", MessageBoxIcon.Error);
+            }
+        }
+        private void DisplayButton_Click(object sender, EventArgs e)
+        {
+            MB("Displaying all employees...", "Display All", MessageBoxIcon.Exclamation);
+        }
+        private void PrintPaychecksButton_Click(object sender, EventArgs e)
+        {
+            MB("Printing paychecks for all employees...", "Printing", MessageBoxIcon.Exclamation);
         }
     }
 }
