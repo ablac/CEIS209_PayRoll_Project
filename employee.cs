@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//****************************************************************************************************************
+//****************************************************EMPLOYEE****************************************************
+//****************************************************************************************************************
 namespace CEIS209_PayRoll_Project
 {
     class Employee
     {
-        //Attributes
+        //***************************************************
+        //********************ATTRIBUTES*********************
+        //***************************************************
         private string firstName;
         private string lastName;
         private string ssn;
         private DateTime hireDate;
-
-        //Constructors
+        //***************************************************
+        //*******************CONSTRUCTORS********************
+        //***************************************************
         public Employee()
         {
             firstName = "unknown";
@@ -29,13 +34,21 @@ namespace CEIS209_PayRoll_Project
             SSN = ssn;
             HireDate = hireDate;
         }
-        //Behaviors
+        //***************************************************
+        //*********************BEHAVIORS*********************
+        //***************************************************
         public override string ToString()
         {
             //Name, SSS: (Number), Hire Date: (Date)
             return firstName + " " + lastName + " " + ", SSN: " + ssn + ", Hire Date: " + hireDate.ToShortDateString();
         }
-        //Properties
+        //***************************************************
+        //********************PROPERTIES*********************
+        //***************************************************
+        
+        //************************************
+        //*************FIRSTNAME**************
+        //************************************
         public string FirstName
         {
             get
@@ -50,6 +63,9 @@ namespace CEIS209_PayRoll_Project
                     firstName = "Unknown";
             }
         }
+        //************************************
+        //*************LASTNAME***************
+        //************************************
         public string LastName
         {
             get
@@ -64,6 +80,9 @@ namespace CEIS209_PayRoll_Project
                     lastName = "Unknown";
             }
         }
+        //************************************
+        //****************SSN*****************
+        //************************************
         public string SSN
         {
             get
@@ -78,6 +97,9 @@ namespace CEIS209_PayRoll_Project
                     ssn = "Unknown";
             }
         }
+        //************************************
+        //*************HIREDATE***************
+        //************************************
         public DateTime HireDate
         {
             get
