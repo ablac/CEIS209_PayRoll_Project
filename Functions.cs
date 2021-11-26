@@ -19,6 +19,7 @@ namespace CEIS209_PayRoll_Project
         //***************************************************
         private void MB(string Text, string Title, MessageBoxIcon ICON)
         {
+            //Create Messagebox
             MessageBox.Show(Text, Title, MessageBoxButtons.OKCancel, ICON);
         }
     }
