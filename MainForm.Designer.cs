@@ -91,7 +91,7 @@
             // PrintPaychecksButton
             // 
             this.PrintPaychecksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.PrintPaychecksButton.Location = new System.Drawing.Point(1083, 35);
+            this.PrintPaychecksButton.Location = new System.Drawing.Point(1095, 35);
             this.PrintPaychecksButton.Name = "PrintPaychecksButton";
             this.PrintPaychecksButton.Size = new System.Drawing.Size(180, 48);
             this.PrintPaychecksButton.TabIndex = 12;
@@ -102,7 +102,7 @@
             // DisplayButton
             // 
             this.DisplayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.DisplayButton.Location = new System.Drawing.Point(897, 35);
+            this.DisplayButton.Location = new System.Drawing.Point(909, 35);
             this.DisplayButton.Name = "DisplayButton";
             this.DisplayButton.Size = new System.Drawing.Size(180, 48);
             this.DisplayButton.TabIndex = 11;
@@ -113,7 +113,7 @@
             // RemoveButton
             // 
             this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.RemoveButton.Location = new System.Drawing.Point(711, 35);
+            this.RemoveButton.Location = new System.Drawing.Point(723, 35);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(180, 48);
             this.RemoveButton.TabIndex = 10;
@@ -124,7 +124,7 @@
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(525, 35);
+            this.AddButton.Location = new System.Drawing.Point(537, 35);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(180, 48);
             this.AddButton.TabIndex = 9;
@@ -132,7 +132,7 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,8 +146,9 @@
             this.Controls.Add(this.DisplayButton);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "MainForm";
+            this.Text = "Payroll System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
