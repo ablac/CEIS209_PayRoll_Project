@@ -75,6 +75,7 @@ namespace CEIS209_PayRoll_Project
             }
             set
             {
+                //verify input exists
                 if (value.Length > 0)
                     firstName = value;
                 else
@@ -92,6 +93,7 @@ namespace CEIS209_PayRoll_Project
             }
             set
             {
+                //Verify input exists
                 if (value.Length > 0)
                     lastName = value;
                 else
@@ -127,6 +129,7 @@ namespace CEIS209_PayRoll_Project
             }
             set
             {
+                //Verify Date is not to Old or in the Future.
                 if (value.Year > 1950 && value.Year < DateTime.Now.Year + 1)
                     hireDate = value;
                 else
