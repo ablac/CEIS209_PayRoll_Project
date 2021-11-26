@@ -14,9 +14,9 @@ namespace CEIS209_PayRoll_Project
 {
     public partial class MainForm
     {
-        //***************************************************
-        //********************MESSAGE BOX********************
-        //***************************************************
+        //************************************
+        //************MESSAGE BOX*************
+        //************************************
         private void MB(string Text, string Title, MessageBoxIcon ICON)
         {
             //Create Messagebox

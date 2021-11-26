@@ -36,10 +36,10 @@ namespace CEIS209_PayRoll_Project
         //************************************
         public Employee(string firstName, string lastName, string ssn, DateTime hireDate)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            SSN = ssn;
-            HireDate = hireDate;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.SSN = ssn;
+            this.HireDate = hireDate;
         }
         //*************************************************************
         //**************************BEHAVIORS**************************
@@ -109,6 +109,7 @@ namespace CEIS209_PayRoll_Project
             }
             set
             {
+                //SSN = 222222222 or 222-22-22222
                 if (value.Length == 9 || value.Length == 11)
                     ssn = value;
                 else
