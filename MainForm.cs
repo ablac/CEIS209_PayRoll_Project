@@ -25,23 +25,27 @@ namespace CEIS209_PayRoll_Project
         {
             //Create Add Employee Data Form
             inputForm frmInput = new inputForm();
-            DialogResult result = frmInput.ShowDialog();
 
-            //See if input from was Cancelled
-            if (result == DialogResult.Cancel)
-                return;
+            using (frmInput)
+            {
+                DialogResult result = frmInput.ShowDialog();
 
-            //Get User Input/Create employee Object
-            string fName = frmInput.firstNameTextBox.Text;
-            string lName = frmInput.lastNameTextBox.Text;
-            string ssn = frmInput.ssnTextBox.Text;
-            string date = frmInput.hireDateTextBox.Text;
-            DateTime hireDate = DateTime.Parse(date);
+                //See if input from was Cancelled
+                if (result == DialogResult.Cancel)
+                    return;
 
-            Employee emp = new Employee(fName, lName, ssn, hireDate);
+                //Get User Input/Create employee Object
+                string fName = frmInput.firstNameTextBox.Text;
+                string lName = frmInput.lastNameTextBox.Text;
+                string ssn = frmInput.ssnTextBox.Text;
+                string date = frmInput.hireDateTextBox.Text;
+                DateTime hireDate = DateTime.Parse(date);
 
-            //Add Employee Object to List
-            EmployeesListBox.Items.Add(emp);
+                Employee emp = new Employee(fName, lName, ssn, hireDate);
+
+                //Add Employee Object to List
+                EmployeesListBox.Items.Add(emp);
+            }
 
         }
         //************************************
@@ -51,7 +55,7 @@ namespace CEIS209_PayRoll_Project
         {
             //Remove the selected item from the employee listbox
             int itemNumber = EmployeesListBox.SelectedIndex;
-            if(itemNumber > -1)
+            if (itemNumber > -1)
             {
                 //Remove Selected Employee
                 EmployeesListBox.Items.RemoveAt(itemNumber);

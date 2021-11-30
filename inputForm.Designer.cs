@@ -46,7 +46,7 @@
             this.hireDateTextBox.Location = new System.Drawing.Point(347, 222);
             this.hireDateTextBox.Name = "hireDateTextBox";
             this.hireDateTextBox.Size = new System.Drawing.Size(384, 53);
-            this.hireDateTextBox.TabIndex = 7;
+            this.hireDateTextBox.TabIndex = 4;
             // 
             // hireDataLabel
             // 
@@ -64,7 +64,7 @@
             this.ssnTextBox.Location = new System.Drawing.Point(347, 163);
             this.ssnTextBox.Name = "ssnTextBox";
             this.ssnTextBox.Size = new System.Drawing.Size(384, 53);
-            this.ssnTextBox.TabIndex = 9;
+            this.ssnTextBox.TabIndex = 3;
             // 
             // ssnLabel
             // 
@@ -82,7 +82,7 @@
             this.lastNameTextBox.Location = new System.Drawing.Point(347, 104);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(384, 53);
-            this.lastNameTextBox.TabIndex = 11;
+            this.lastNameTextBox.TabIndex = 2;
             // 
             // lastNameLabel
             // 
@@ -100,7 +100,7 @@
             this.firstNameTextBox.Location = new System.Drawing.Point(347, 45);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(384, 53);
-            this.firstNameTextBox.TabIndex = 13;
+            this.firstNameTextBox.TabIndex = 1;
             // 
             // firstNameLabel
             // 
@@ -118,7 +118,7 @@
             this.submitButton.Location = new System.Drawing.Point(173, 289);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(220, 64);
-            this.submitButton.TabIndex = 14;
+            this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -129,7 +129,7 @@
             this.exitButton.Location = new System.Drawing.Point(399, 289);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(220, 64);
-            this.exitButton.TabIndex = 15;
+            this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Cancel";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
