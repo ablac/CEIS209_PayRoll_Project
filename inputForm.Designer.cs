@@ -37,7 +37,7 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hireDateTextBox
@@ -121,23 +121,25 @@
             this.submitButton.TabIndex = 14;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
-            // cancelButton
+            // exitButton
             // 
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cancelButton.Location = new System.Drawing.Point(399, 289);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(220, 64);
-            this.cancelButton.TabIndex = 15;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.exitButton.Location = new System.Drawing.Point(399, 289);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(220, 64);
+            this.exitButton.TabIndex = 15;
+            this.exitButton.Text = "Cancel";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // inputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 399);
-            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.firstNameLabel);
@@ -155,16 +157,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox hireDateTextBox;
         private System.Windows.Forms.Label hireDataLabel;
-        private System.Windows.Forms.TextBox ssnTextBox;
         private System.Windows.Forms.Label ssnLabel;
-        private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label lastNameLabel;
-        private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button exitButton;
+        public System.Windows.Forms.TextBox hireDateTextBox;
+        public System.Windows.Forms.TextBox ssnTextBox;
+        public System.Windows.Forms.TextBox lastNameTextBox;
+        public System.Windows.Forms.TextBox firstNameTextBox;
     }
 }

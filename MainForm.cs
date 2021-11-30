@@ -23,8 +23,26 @@ namespace CEIS209_PayRoll_Project
         //************************************
         private void AddButton_Click(object sender, EventArgs e)
         {
-            //Add item to the employee listbox
-            EmployeesListBox.Items.Add("New Employee");
+            //Create Add Employee Data Form
+            inputForm frmInput = new inputForm();
+            DialogResult result = frmInput.ShowDialog();
+
+            //See if input from was Cancelled
+            if (result == DialogResult.Cancel)
+                return;
+
+            //Get User Input/Create employee Object
+            string fName = frmInput.firstNameTextBox.Text;
+            string lName = frmInput.lastNameTextBox.Text;
+            string ssn = frmInput.ssnTextBox.Text;
+            string date = frmInput.hireDateTextBox.Text;
+            DateTime hireDate = DateTime.Parse(date);
+
+            Employee emp = new Employee(fName, lName, ssn, hireDate);
+
+            //Add Employee Object to List
+            EmployeesListBox.Items.Add(emp);
+
         }
         //************************************
         //***********REMOVE BUTTON************
