@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,9 @@ namespace CEIS209_PayRoll_Project
 
                 //Add Employee Object to List
                 EmployeesListBox.Items.Add(emp);
+
+                //Write all Employee Objects to the file
+                WriteEmpsToFile();
             }
 
         }
@@ -59,6 +63,9 @@ namespace CEIS209_PayRoll_Project
             {
                 //Remove Selected Employee
                 EmployeesListBox.Items.RemoveAt(itemNumber);
+
+                //Update File
+                WriteEmpsToFile();
             }
             else
             {
@@ -71,6 +78,35 @@ namespace CEIS209_PayRoll_Project
         //************************************
         private void DisplayButton_Click(object sender, EventArgs e)
         {
+            //Clear the listbox
+            EmployeesListBox.Items.Clear();
+
+            //Read all employee data from file
+            StreamReader sr = new StreamReader(fileName);
+
+            using (sr)
+            {
+                while (sr.Peek() != -1)
+                {
+                    //Read line, and break into parts
+                    string line = sr.ReadLine();
+
+                    //Split Data
+                    string[] parts = line.Split(',');
+
+                    //Import Data
+                    string fName = parts[0];
+                    string lName = parts[1];
+                    string ssn = parts[2];
+                    DateTime hireDate = DateTime.Parse(parts[3]);
+
+                    //Create Employee Object
+                    Employee emp = new Employee(fName, lName, ssn, hireDate);
+                    EmployeesListBox.Items.Add(emp);
+
+                }
+            }
+            
             //Display all Employees
             MB("Displaying all employees...", "Display All", MessageBoxIcon.Exclamation);
         }
