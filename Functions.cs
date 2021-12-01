@@ -15,7 +15,7 @@ namespace CEIS209_PayRoll_Project
 {
     public partial class MainForm
     {
-
+        //FileName for Saved Data
         private string fileName = "Employees.csv";
         //************************************
         //***********WRITE TO FILE************
@@ -67,6 +67,7 @@ namespace CEIS209_PayRoll_Project
                     Employee emp = new Employee(fName, lName, ssn, hireDate);
                     EmployeesListBox.Items.Add(emp);
 
+                    displayLabel.Text = $"{fileName} loaded successfully!";
                 }
             }
         }
@@ -77,7 +78,6 @@ namespace CEIS209_PayRoll_Project
         {
             //Load Employees from file
             this.ReadEmpsFromFile();
-            displayLabel.Text = $"{fileName} loaded successfully!";
         }
     }
 }
