@@ -48,7 +48,7 @@ namespace CEIS209_PayRoll_Project
                 EmployeesListBox.Items.Add(emp);
 
                 //Write all Employee Objects to the file
-                WriteEmpsToFile();
+                WriteEmpsToFile($"{fName} {lName} added to {fileName} successful!");
             }
 
         }
@@ -65,50 +65,13 @@ namespace CEIS209_PayRoll_Project
                 EmployeesListBox.Items.RemoveAt(itemNumber);
 
                 //Update File
-                WriteEmpsToFile();
+                WriteEmpsToFile($"Employee removed from {fileName} successfully!");
             }
             else
             {
                 //Display message
-                MB("Please Select employee to remove.", "Error!", MessageBoxIcon.Error);
+                displayLabel.Text = "Please select an employee to remove!";
             }
-        }
-        //************************************
-        //**********DISPLAY BUTTON************
-        //************************************
-        private void DisplayButton_Click(object sender, EventArgs e)
-        {
-            //Clear the listbox
-            EmployeesListBox.Items.Clear();
-
-            //Read all employee data from file
-            StreamReader sr = new StreamReader(fileName);
-
-            using (sr)
-            {
-                while (sr.Peek() != -1)
-                {
-                    //Read line, and break into parts
-                    string line = sr.ReadLine();
-
-                    //Split Data
-                    string[] parts = line.Split(',');
-
-                    //Import Data
-                    string fName = parts[0];
-                    string lName = parts[1];
-                    string ssn = parts[2];
-                    DateTime hireDate = DateTime.Parse(parts[3]);
-
-                    //Create Employee Object
-                    Employee emp = new Employee(fName, lName, ssn, hireDate);
-                    EmployeesListBox.Items.Add(emp);
-
-                }
-            }
-            
-            //Display all Employees
-            MB("Displaying all employees...", "Display All", MessageBoxIcon.Exclamation);
         }
         //************************************
         //************PRINT BUTTON************
@@ -116,7 +79,7 @@ namespace CEIS209_PayRoll_Project
         private void PrintPaychecksButton_Click(object sender, EventArgs e)
         {
             //Print Paychecks
-            MB("Printing paychecks for all employees...", "Printing", MessageBoxIcon.Exclamation);
+            displayLabel.Text = "Printing paychecks for all employees!";
             Employee emp = new Employee();
         }
     }

@@ -34,19 +34,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PrintPaychecksButton = new System.Windows.Forms.Button();
-            this.DisplayButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.displayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // EmployeesListBox
             // 
+            this.EmployeesListBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.EmployeesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeesListBox.FormattingEnabled = true;
             this.EmployeesListBox.ItemHeight = 37;
-            this.EmployeesListBox.Location = new System.Drawing.Point(22, 120);
+            this.EmployeesListBox.Location = new System.Drawing.Point(22, 74);
             this.EmployeesListBox.Name = "EmployeesListBox";
-            this.EmployeesListBox.Size = new System.Drawing.Size(1289, 559);
+            this.EmployeesListBox.Size = new System.Drawing.Size(1067, 559);
             this.EmployeesListBox.TabIndex = 99999;
             // 
             // label4
@@ -91,65 +92,71 @@
             // 
             // PrintPaychecksButton
             // 
+            this.PrintPaychecksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PrintPaychecksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.PrintPaychecksButton.Location = new System.Drawing.Point(1095, 35);
+            this.PrintPaychecksButton.Location = new System.Drawing.Point(898, 35);
             this.PrintPaychecksButton.Name = "PrintPaychecksButton";
             this.PrintPaychecksButton.Size = new System.Drawing.Size(180, 48);
             this.PrintPaychecksButton.TabIndex = 4;
             this.PrintPaychecksButton.Text = "Print";
-            this.PrintPaychecksButton.UseVisualStyleBackColor = true;
+            this.PrintPaychecksButton.UseVisualStyleBackColor = false;
             this.PrintPaychecksButton.Click += new System.EventHandler(this.PrintPaychecksButton_Click);
-            // 
-            // DisplayButton
-            // 
-            this.DisplayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.DisplayButton.Location = new System.Drawing.Point(909, 35);
-            this.DisplayButton.Name = "DisplayButton";
-            this.DisplayButton.Size = new System.Drawing.Size(180, 48);
-            this.DisplayButton.TabIndex = 3;
-            this.DisplayButton.Text = "Display";
-            this.DisplayButton.UseVisualStyleBackColor = true;
-            this.DisplayButton.Click += new System.EventHandler(this.DisplayButton_Click);
             // 
             // RemoveButton
             // 
+            this.RemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.RemoveButton.Location = new System.Drawing.Point(723, 35);
+            this.RemoveButton.Location = new System.Drawing.Point(712, 35);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(180, 48);
             this.RemoveButton.TabIndex = 2;
             this.RemoveButton.Text = "Remove";
-            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.UseVisualStyleBackColor = false;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // AddButton
             // 
+            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(537, 35);
+            this.AddButton.ForeColor = System.Drawing.Color.Black;
+            this.AddButton.Location = new System.Drawing.Point(526, 35);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(180, 48);
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // displayLabel
+            // 
+            this.displayLabel.AutoSize = true;
+            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayLabel.ForeColor = System.Drawing.Color.Red;
+            this.displayLabel.Location = new System.Drawing.Point(18, 647);
+            this.displayLabel.Name = "displayLabel";
+            this.displayLabel.Size = new System.Drawing.Size(113, 22);
+            this.displayLabel.TabIndex = 100000;
+            this.displayLabel.Text = "DisplayLabel";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 699);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1101, 685);
+            this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.EmployeesListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PrintPaychecksButton);
-            this.Controls.Add(this.DisplayButton);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
             this.Text = "Payroll System";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +170,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button PrintPaychecksButton;
-        private System.Windows.Forms.Button DisplayButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Label displayLabel;
     }
 }
 

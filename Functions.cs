@@ -18,15 +18,9 @@ namespace CEIS209_PayRoll_Project
 
         private string fileName = "Employees.csv";
         //************************************
-        //************MESSAGE BOX*************
+        //***********WRITE TO FILE************
         //************************************
-        private void MB(string Text, string Title, MessageBoxIcon ICON)
-        {
-            //Create Messagebox
-            MessageBox.Show(Text, Title, MessageBoxButtons.OKCancel, ICON);
-        }
-
-        private void WriteEmpsToFile()
+        private void WriteEmpsToFile(string message)
         {
             //Open File
             StreamWriter sw = new StreamWriter(fileName);
@@ -40,12 +34,50 @@ namespace CEIS209_PayRoll_Project
                 sw.WriteLine(temp.FirstName + "," + temp.LastName + "," + temp.SSN + ","
                     + temp.HireDate.ToShortDateString());
 
+                displayLabel.Text = $"{message}";
             }
             //Close File
             sw.Close();
+        }
+        //************************************
+        //*************READ FILE**************
+        //************************************
+        private void ReadEmpsFromFile()
+        {
+            //Read all employee data from file
+            StreamReader sr = new StreamReader(fileName);
 
-            //Tell user file saved.
-            MB("Employees saved to file!", "Saved!", MessageBoxIcon.Exclamation);
+            using (sr)
+            {
+                while (sr.Peek() != -1)
+                {
+                    //Read line, and break into parts
+                    string line = sr.ReadLine();
+
+                    //Split Data
+                    string[] parts = line.Split(',');
+
+                    //Import Data
+                    string fName = parts[0];
+                    string lName = parts[1];
+                    string ssn = parts[2];
+                    DateTime hireDate = DateTime.Parse(parts[3]);
+
+                    //Create Employee Object
+                    Employee emp = new Employee(fName, lName, ssn, hireDate);
+                    EmployeesListBox.Items.Add(emp);
+
+                }
+            }
+        }
+        //************************************
+        //*********READ FILE ON LOAD**********
+        //************************************
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //Load Employees from file
+            this.ReadEmpsFromFile();
+            displayLabel.Text = $"{fileName} loaded successfully!";
         }
     }
 }
