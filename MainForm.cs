@@ -29,6 +29,7 @@ namespace CEIS209_PayRoll_Project
 
             using (frmInput)
             {
+                frmInput.StartPosition = FormStartPosition.CenterParent;
                 DialogResult result = frmInput.ShowDialog();
 
                 //See if input from was Cancelled

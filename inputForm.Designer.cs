@@ -42,103 +42,110 @@
             // 
             // hireDateTextBox
             // 
-            this.hireDateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hireDateTextBox.Location = new System.Drawing.Point(347, 222);
+            this.hireDateTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.hireDateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hireDateTextBox.Location = new System.Drawing.Point(167, 195);
             this.hireDateTextBox.Name = "hireDateTextBox";
-            this.hireDateTextBox.Size = new System.Drawing.Size(384, 53);
+            this.hireDateTextBox.Size = new System.Drawing.Size(258, 35);
             this.hireDateTextBox.TabIndex = 4;
             // 
             // hireDataLabel
             // 
             this.hireDataLabel.AutoSize = true;
-            this.hireDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hireDataLabel.Location = new System.Drawing.Point(61, 225);
+            this.hireDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hireDataLabel.Location = new System.Drawing.Point(13, 198);
             this.hireDataLabel.Name = "hireDataLabel";
-            this.hireDataLabel.Size = new System.Drawing.Size(209, 46);
+            this.hireDataLabel.Size = new System.Drawing.Size(130, 29);
             this.hireDataLabel.TabIndex = 6;
             this.hireDataLabel.Text = "Hire Date:";
             // 
             // ssnTextBox
             // 
-            this.ssnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssnTextBox.Location = new System.Drawing.Point(347, 163);
+            this.ssnTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ssnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ssnTextBox.Location = new System.Drawing.Point(167, 136);
             this.ssnTextBox.Name = "ssnTextBox";
-            this.ssnTextBox.Size = new System.Drawing.Size(384, 53);
+            this.ssnTextBox.Size = new System.Drawing.Size(258, 35);
             this.ssnTextBox.TabIndex = 3;
             // 
             // ssnLabel
             // 
             this.ssnLabel.AutoSize = true;
-            this.ssnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssnLabel.Location = new System.Drawing.Point(61, 166);
+            this.ssnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ssnLabel.Location = new System.Drawing.Point(13, 139);
             this.ssnLabel.Name = "ssnLabel";
-            this.ssnLabel.Size = new System.Drawing.Size(118, 46);
+            this.ssnLabel.Size = new System.Drawing.Size(73, 29);
             this.ssnLabel.TabIndex = 8;
             this.ssnLabel.Text = "SSN:";
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(347, 104);
+            this.lastNameTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(167, 77);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(384, 53);
+            this.lastNameTextBox.Size = new System.Drawing.Size(258, 35);
             this.lastNameTextBox.TabIndex = 2;
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(61, 107);
+            this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameLabel.Location = new System.Drawing.Point(13, 80);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(233, 46);
+            this.lastNameLabel.Size = new System.Drawing.Size(144, 29);
             this.lastNameLabel.TabIndex = 10;
             this.lastNameLabel.Text = "Last Name:";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTextBox.Location = new System.Drawing.Point(347, 45);
+            this.firstNameTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameTextBox.Location = new System.Drawing.Point(167, 18);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(384, 53);
+            this.firstNameTextBox.Size = new System.Drawing.Size(258, 35);
             this.firstNameTextBox.TabIndex = 1;
             // 
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(61, 48);
+            this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameLabel.Location = new System.Drawing.Point(13, 21);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(236, 46);
+            this.firstNameLabel.Size = new System.Drawing.Size(148, 29);
             this.firstNameLabel.TabIndex = 12;
             this.firstNameLabel.Text = "First Name:";
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.submitButton.Location = new System.Drawing.Point(173, 289);
+            this.submitButton.Location = new System.Drawing.Point(23, 248);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(220, 64);
+            this.submitButton.Size = new System.Drawing.Size(193, 64);
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.exitButton.Location = new System.Drawing.Point(399, 289);
+            this.exitButton.Location = new System.Drawing.Point(222, 248);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(220, 64);
+            this.exitButton.Size = new System.Drawing.Size(193, 64);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Cancel";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // inputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 399);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(438, 331);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.firstNameTextBox);
