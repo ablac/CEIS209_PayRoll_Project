@@ -66,10 +66,7 @@ namespace CEIS209_PayRoll_Project
         //************************************
         public string FirstName
         {
-            get
-            {
-                return firstName;
-            }
+            get{return firstName;}
             set
             {
                 //verify input exists
@@ -84,10 +81,7 @@ namespace CEIS209_PayRoll_Project
         //************************************
         public string LastName
         {
-            get
-            {
-                return lastName;
-            }
+            get{return lastName;}
             set
             {
                 //Verify input exists
@@ -102,10 +96,7 @@ namespace CEIS209_PayRoll_Project
         //************************************
         public string SSN
         {
-            get
-            {
-                return ssn;
-            }
+            get{return ssn;}
             set
             {
                 //SSN = 222222222 or 222-22-22222
@@ -120,10 +111,7 @@ namespace CEIS209_PayRoll_Project
         //************************************
         public DateTime HireDate
         {
-            get
-            {
-                return hireDate;
-            }
+            get{return hireDate;}
             set
             {
                 //Verify Date is not to Old or in the Future.
