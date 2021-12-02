@@ -44,7 +44,7 @@
             // 
             this.hireDateTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.hireDateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hireDateTextBox.Location = new System.Drawing.Point(167, 195);
+            this.hireDateTextBox.Location = new System.Drawing.Point(167, 141);
             this.hireDateTextBox.Name = "hireDateTextBox";
             this.hireDateTextBox.Size = new System.Drawing.Size(258, 35);
             this.hireDateTextBox.TabIndex = 4;
@@ -53,7 +53,7 @@
             // 
             this.hireDataLabel.AutoSize = true;
             this.hireDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hireDataLabel.Location = new System.Drawing.Point(13, 198);
+            this.hireDataLabel.Location = new System.Drawing.Point(13, 144);
             this.hireDataLabel.Name = "hireDataLabel";
             this.hireDataLabel.Size = new System.Drawing.Size(130, 29);
             this.hireDataLabel.TabIndex = 6;
@@ -63,7 +63,7 @@
             // 
             this.ssnTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ssnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssnTextBox.Location = new System.Drawing.Point(167, 136);
+            this.ssnTextBox.Location = new System.Drawing.Point(167, 100);
             this.ssnTextBox.Name = "ssnTextBox";
             this.ssnTextBox.Size = new System.Drawing.Size(258, 35);
             this.ssnTextBox.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             this.ssnLabel.AutoSize = true;
             this.ssnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssnLabel.Location = new System.Drawing.Point(13, 139);
+            this.ssnLabel.Location = new System.Drawing.Point(13, 103);
             this.ssnLabel.Name = "ssnLabel";
             this.ssnLabel.Size = new System.Drawing.Size(73, 29);
             this.ssnLabel.TabIndex = 8;
@@ -82,7 +82,7 @@
             // 
             this.lastNameTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(167, 77);
+            this.lastNameTextBox.Location = new System.Drawing.Point(167, 59);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(258, 35);
             this.lastNameTextBox.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(13, 80);
+            this.lastNameLabel.Location = new System.Drawing.Point(13, 62);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(144, 29);
             this.lastNameLabel.TabIndex = 10;
@@ -120,7 +120,7 @@
             // 
             this.submitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.submitButton.Location = new System.Drawing.Point(23, 248);
+            this.submitButton.Location = new System.Drawing.Point(23, 198);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(193, 64);
             this.submitButton.TabIndex = 5;
@@ -132,7 +132,7 @@
             // 
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.exitButton.Location = new System.Drawing.Point(222, 248);
+            this.exitButton.Location = new System.Drawing.Point(222, 198);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(193, 64);
             this.exitButton.TabIndex = 6;
@@ -145,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(438, 331);
+            this.ClientSize = new System.Drawing.Size(438, 274);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.firstNameTextBox);
