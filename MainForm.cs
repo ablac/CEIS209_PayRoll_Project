@@ -60,6 +60,7 @@ namespace CEIS209_PayRoll_Project
         {
             //Remove the selected item from the employee listbox
             int itemNumber = EmployeesListBox.SelectedIndex;
+
             if (itemNumber > -1)
             {
                 //Remove Selected Employee
