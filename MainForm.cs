@@ -24,7 +24,7 @@ namespace CEIS209_PayRoll_Project
                 frmInput.StartPosition = FormStartPosition.CenterParent;
                 DialogResult result = frmInput.ShowDialog();
 
-                //See if input from was Cancelled
+                //See if input form was Cancelled
                 if (result == DialogResult.Cancel)
                     return;
 
@@ -41,7 +41,7 @@ namespace CEIS209_PayRoll_Project
                 EmployeesListBox.Items.Add(emp);
 
                 //Write all Employee Objects to the file
-                WriteEmpsToFile($"{fName} {lName} added to {fileName} successful!");
+                WriteEmpsToFile($"{fName} {lName} added to {FILENAME} successful!");
             }
         }
         //************************************
@@ -58,7 +58,7 @@ namespace CEIS209_PayRoll_Project
                 EmployeesListBox.Items.RemoveAt(itemNumber);
 
                 //Update File
-                WriteEmpsToFile($"Employee removed from {fileName} successfully!");
+                WriteEmpsToFile($"Employee removed from {FILENAME} successfully!");
             }
             else
             {

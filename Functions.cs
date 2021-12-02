@@ -8,14 +8,14 @@ namespace CEIS209_PayRoll_Project
     public partial class MainForm
     {
         //FileName for Saved Data
-        private string fileName = "Employees.csv";
+        private const String FILENAME = "Employees.csv";
         //************************************
         //***********WRITE TO FILE************
         //************************************
         private void WriteEmpsToFile(string message)
         {
             //Open File
-            StreamWriter sw = new StreamWriter(fileName);
+            StreamWriter sw = new StreamWriter(FILENAME);
 
             //Write Employee Objects to file
             for (int i = 0; i < EmployeesListBox.Items.Count; i++)
@@ -26,6 +26,7 @@ namespace CEIS209_PayRoll_Project
                 sw.WriteLine(temp.FirstName + "," + temp.LastName + "," + temp.SSN + ","
                     + temp.HireDate.ToShortDateString());
 
+                //Display Message to user
                 displayLabel.Text = $"{message}";
             }
             //Close File
@@ -37,7 +38,7 @@ namespace CEIS209_PayRoll_Project
         private void ReadEmpsFromFile()
         {
             //Read all employee data from file
-            StreamReader sr = new StreamReader(fileName);
+            StreamReader sr = new StreamReader(FILENAME);
 
             using (sr)
             {
@@ -59,7 +60,8 @@ namespace CEIS209_PayRoll_Project
                     Employee emp = new Employee(fName, lName, ssn, hireDate);
                     EmployeesListBox.Items.Add(emp);
 
-                    displayLabel.Text = $"{fileName} loaded successfully!";
+                    //Display message to user
+                    displayLabel.Text = $"{FILENAME} loaded successfully!";
                 }
             }
         }
