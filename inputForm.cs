@@ -5,9 +5,9 @@ using System.Windows.Forms;
 //****************************************************************************************************************
 namespace CEIS209_PayRoll_Project
 {
-    public partial class inputForm : Form
+    public partial class InputForm : Form
     {
-        public inputForm()
+        public InputForm()
         {
             InitializeComponent();
         }
