@@ -18,13 +18,11 @@ namespace CEIS209_PayRoll_Project
             StreamWriter sw = new StreamWriter(FILENAME);
 
             //Write Employee Objects to file
-            for (int i = 0; i < EmployeesListBox.Items.Count; i++)
+            foreach (Employee emp in EmployeesListBox.Items)
             {
-                Employee temp = (Employee)EmployeesListBox.Items[i];
-
                 //Write to File
-                sw.WriteLine(temp.FirstName + "," + temp.LastName + "," + temp.SSN + ","
-                    + temp.HireDate.ToShortDateString());
+                sw.WriteLine(emp.FirstName + "," + emp.LastName + "," + emp.SSN + ","
+                    + emp.HireDate.ToShortDateString());
 
                 //Display Message to user
                 displayLabel.Text = $"{message}";
