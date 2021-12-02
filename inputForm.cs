@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//****************************************************************************************************************
+//****************************************************INPUTFORM***************************************************
+//****************************************************************************************************************
 namespace CEIS209_PayRoll_Project
 {
     public partial class inputForm : Form
@@ -16,13 +11,17 @@ namespace CEIS209_PayRoll_Project
         {
             InitializeComponent();
         }
-
+        //************************************
+        //***********SUBMIT BUTTON************
+        //************************************
         private void submitButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Hide();
         }
-
+        //************************************
+        //************EXIT BUTTON*************
+        //************************************
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.DialogResult= DialogResult.Cancel;

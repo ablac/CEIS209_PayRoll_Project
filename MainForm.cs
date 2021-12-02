@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 //****************************************************************************************************************
 //*****************************************************MAINFORM***************************************************
@@ -51,7 +43,6 @@ namespace CEIS209_PayRoll_Project
                 //Write all Employee Objects to the file
                 WriteEmpsToFile($"{fName} {lName} added to {fileName} successful!");
             }
-
         }
         //************************************
         //***********REMOVE BUTTON************
