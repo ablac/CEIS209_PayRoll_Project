@@ -16,19 +16,19 @@ namespace CEIS209_PayRoll_Project
         {
             //Open File
             StreamWriter sw = new StreamWriter(FILENAME);
-
-            //Write Employee Objects to file
-            foreach (Employee emp in EmployeesListBox.Items)
+            using (sw)
             {
-                //Write to File
-                sw.WriteLine(emp.FirstName + "," + emp.LastName + "," + emp.SSN + ","
-                    + emp.HireDate.ToShortDateString());
+                //Write Employee Objects to file
+                foreach (Employee emp in EmployeesListBox.Items)
+                {
+                    //Write to File
+                    sw.WriteLine(emp.FirstName + "," + emp.LastName + "," + emp.SSN + ","
+                        + emp.HireDate.ToShortDateString());
 
-                //Display Message to user
-                displayLabel.Text = $"{message}";
+                    //Display Message to user
+                    displayLabel.Text = $"{message}";
+                }
             }
-            //Close File
-            sw.Close();
         }
         //************************************
         //*************READ FILE**************
