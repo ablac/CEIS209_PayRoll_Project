@@ -1,6 +1,6 @@
 ﻿namespace CEIS209_PayRoll_Project
 {
-    partial class inputForm
+    partial class InputForm
     {
         /// <summary>
         /// Required designer variable.

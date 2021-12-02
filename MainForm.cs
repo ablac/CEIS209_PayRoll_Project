@@ -17,7 +17,7 @@ namespace CEIS209_PayRoll_Project
         private void AddButton_Click(object sender, EventArgs e)
         {
             //Create Add Employee Data Form
-            inputForm frmInput = new inputForm();
+            InputForm frmInput = new InputForm();
 
             using (frmInput)
             {
