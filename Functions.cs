@@ -19,11 +19,13 @@ namespace CEIS209_PayRoll_Project
             using (sw)
             {
                 //Write Employee Objects to file
-                foreach (Employee emp in EmployeesListBox.Items)
+                foreach (Employee temp in EmployeesListBox.Items)
                 {
                     //Write to File
-                    sw.WriteLine(emp.FirstName + "," + emp.LastName + "," + emp.SSN + ","
-                        + emp.HireDate.ToShortDateString());
+                    sw.WriteLine(temp.FirstName + ',' + temp.LastName + ',' + temp.SSN + ','
+                        + temp.HireDate.ToShortDateString() + ',' 
+                        + temp.BenefitsPackage.HealthInsurance + ',' + temp.BenefitsPackage.LifeInsurance 
+                        + ',' + temp.BenefitsPackage.Vacation);
 
                     //Display Message to user
                     displayLabel.Text = $"{message}";
@@ -48,14 +50,19 @@ namespace CEIS209_PayRoll_Project
                     //Split Data
                     string[] parts = line.Split(',');
 
-                    //Import Data
+                    //Import EMP Data
                     string fName = parts[0];
                     string lName = parts[1];
                     string ssn = parts[2];
                     DateTime hireDate = DateTime.Parse(parts[3]);
+                    //Import Benefits
+                    string healthINS = parts[4];
+                    double lifeINS = Double.Parse(parts[5]);
+                    int vacation = Int32.Parse(parts[6]);
 
                     //Create Employee Object
-                    Employee emp = new Employee(fName, lName, ssn, hireDate);
+                    Employee emp = new Employee(fName, lName, ssn, hireDate, 
+                        new Benefits(healthINS, lifeINS, vacation));
                     EmployeesListBox.Items.Add(emp);
 
                     //Display message to user

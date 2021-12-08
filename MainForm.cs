@@ -42,7 +42,7 @@ namespace CEIS209_PayRoll_Project
 
                 Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
 
-                Employee emp = new Employee(fName, lName, ssn, hireDate);
+                Employee emp = new Employee(fName, lName, ssn, hireDate, benefits);
 
                 //Add Employee Object to List
                 EmployeesListBox.Items.Add(emp);
