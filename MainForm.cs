@@ -35,6 +35,13 @@ namespace CEIS209_PayRoll_Project
                 string date = frmInput.hireDateTextBox.Text;
                 DateTime hireDate = DateTime.Parse(date);
 
+                //Get Benefits Information
+                string healthINS = frmInput.healthINSTextBox.Text;
+                double lifeINS = Double.Parse( frmInput.lifeINSTextBox.Text );
+                int vacation = Int32.Parse(frmInput.vacationTextBox.Text);
+
+                Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
+
                 Employee emp = new Employee(fName, lName, ssn, hireDate);
 
                 //Add Employee Object to List

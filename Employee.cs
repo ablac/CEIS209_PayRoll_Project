@@ -13,6 +13,8 @@ namespace CEIS209_PayRoll_Project
         private string lastName;
         private string ssn;
         private DateTime hireDate;
+        private Benefits benefits;
+
         //*************************************************************
         //************************CONSTRUCTORS*************************
         //*************************************************************
@@ -30,12 +32,13 @@ namespace CEIS209_PayRoll_Project
         //************************************
         //************SET INPUTS**************
         //************************************
-        public Employee(string firstName, string lastName, string ssn, DateTime hireDate)
+        public Employee(string firstName, string lastName, string ssn, DateTime hireDate, Benefits benefits)
         {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.SSN = ssn;
-            this.HireDate = hireDate;
+            FirstName = firstName;
+            LastName = lastName;
+            SSN = ssn;
+            HireDate = hireDate;
+            BenefitsPackage = benefits;
         }
         //*************************************************************
         //**************************BEHAVIORS**************************
@@ -47,8 +50,7 @@ namespace CEIS209_PayRoll_Project
         public override string ToString()
         {
             //Name, SSS: (Number), Hire Date: (Date)
-            return firstName + " " + lastName + ", SSN: " + ssn + ", Hire Date: " 
-                + hireDate.ToShortDateString();
+            return $"{firstName} {lastName}, SSN: {ssn}, Hire Date: {hireDate.ToShortDateString()}";
         }
         //************************************
         //***********CALCULATE PAY************
@@ -120,6 +122,14 @@ namespace CEIS209_PayRoll_Project
                 else
                     hireDate = DateTime.MinValue;
             }
+        }
+        //************************************
+        //*********BENEFITS PACKAGE***********
+        //************************************
+        public Benefits BenefitsPackage
+        {
+            get { return benefits;}
+            set { benefits = value; }
         }
     }
 }
