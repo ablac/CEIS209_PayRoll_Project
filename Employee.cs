@@ -9,11 +9,11 @@ namespace CEIS209_PayRoll_Project
         //*************************************************************
         //*************************ATTRIBUTES**************************
         //*************************************************************
-        private string firstName;
-        private string lastName;
-        private string ssn;
-        private DateTime hireDate;
-        private Benefits benefits;
+        protected string firstName;
+        protected string lastName;
+        protected string ssn;
+        protected DateTime hireDate;
+        protected Benefits benefits;
 
         //*************************************************************
         //************************CONSTRUCTORS*************************
@@ -55,9 +55,9 @@ namespace CEIS209_PayRoll_Project
         //************************************
         //***********CALCULATE PAY************
         //************************************
-        public double CalculatePay()
+        public virtual double CalculatePay()
         {
-            return 0;
+            return 0.0;
         }
         //*************************************************************
         //*************************PROPERTIES**************************
