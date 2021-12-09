@@ -49,6 +49,7 @@
             this.EmployeesListBox.Name = "EmployeesListBox";
             this.EmployeesListBox.Size = new System.Drawing.Size(735, 263);
             this.EmployeesListBox.TabIndex = 99999;
+            this.EmployeesListBox.DoubleClick += new System.EventHandler(this.EmployeesListBox_DoubleClick);
             // 
             // label4
             // 

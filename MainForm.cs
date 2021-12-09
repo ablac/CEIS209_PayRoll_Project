@@ -82,5 +82,79 @@ namespace CEIS209_PayRoll_Project
             displayLabel.Text = "Printing paychecks for all employees!";
             Employee emp = new Employee();
         }
+
+        private void EmployeesListBox_DoubleClick(object sender, EventArgs e)
+        {
+            //Edit Selected Employee in the list box.
+            InputForm frmUpdate = new InputForm();
+            using (frmUpdate)
+            {
+                int itemNumber = EmployeesListBox.SelectedIndex;
+
+                //Update Form Button/Start Position
+                frmUpdate.submitButton.Text = "Update";
+                frmUpdate.StartPosition = FormStartPosition.CenterParent;
+
+                //Error Check
+                if (itemNumber < 0)
+                {
+                    displayLabel.Text = "Error, Invalid Employee.";
+                    return;
+                }
+
+                //Find selected Employee Data
+                Employee emp = (Employee)EmployeesListBox.Items[itemNumber];
+
+                //Import Employee Data
+                frmUpdate.firstNameTextBox.Text = emp.FirstName;
+                frmUpdate.lastNameTextBox.Text = emp.LastName;
+                frmUpdate.ssnTextBox.Text = emp.SSN;
+                frmUpdate.hireDateTextBox.Text = emp.HireDate.ToShortDateString();
+
+                //Import Benefits
+                frmUpdate.healthINSTextBox.Text = emp.BenefitsPackage.HealthInsurance;
+                frmUpdate.lifeINSTextBox.Text = emp.BenefitsPackage.LifeInsurance.ToString("C2");
+                frmUpdate.vacationTextBox.Text = emp.BenefitsPackage.Vacation.ToString();
+
+                //Update Form Title
+                frmUpdate.Text = $"{emp.FirstName} {emp.LastName} Update Form";
+
+                DialogResult result = frmUpdate.ShowDialog();
+
+                //End Method if user cancles Update
+                if (result == DialogResult.Cancel)
+                    return;
+
+                //Remove Old Data
+                EmployeesListBox.Items.RemoveAt(itemNumber);
+
+                //Get User Input/Create employee Object
+                string fName = frmUpdate.firstNameTextBox.Text;
+                string lName = frmUpdate.lastNameTextBox.Text;
+                string ssn = frmUpdate.ssnTextBox.Text;
+                string date = frmUpdate.hireDateTextBox.Text;
+                DateTime hireDate = DateTime.Parse(date);
+
+                //Get Benefits Information
+                string healthINS = frmUpdate.healthINSTextBox.Text;
+
+                //pull a substring that does not contain the $
+                string lifeINSString = frmUpdate.lifeINSTextBox.Text;
+                lifeINSString = lifeINSString.Substring(1);
+                double lifeINS = Double.Parse(lifeINSString);
+
+                int vacation = Int32.Parse(frmUpdate.vacationTextBox.Text);
+
+                Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
+                emp = new Employee(fName, lName, ssn, hireDate, benefits);
+
+                //Add Employee Object to List
+                EmployeesListBox.Items.Add(emp);
+
+                //Write all Employee Objects to the file
+                WriteEmpsToFile($"{fName} {lName} updated to {FILENAME} successful!");
+
+            }
+        }
     }
 }

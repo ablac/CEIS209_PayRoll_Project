@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//****************************************************************************************************************
+//****************************************************BENEFITS****************************************************
+//****************************************************************************************************************
 
 namespace CEIS209_PayRoll_Project
 {
@@ -17,13 +20,19 @@ namespace CEIS209_PayRoll_Project
         //*************************************************************
         //************************CONSTRUCTORS*************************
         //*************************************************************
+
+        //************************************
+        //***********SET DEFAULTS*************
+        //************************************
         public Benefits()
         {
             healthInsurance = "Unknown";
             lifeInsurance = 0.0;
             vacation = 0;
         }
-
+        //************************************
+        //************SET INPUTS**************
+        //************************************
         public Benefits(string healthInsurance, double lifeInsurance, int vacation)
         {
             HealthInsurance = healthInsurance;
@@ -64,7 +73,7 @@ namespace CEIS209_PayRoll_Project
             get { return lifeInsurance; }
             set
             {
-                if (value > 0.0 && value <= 10000000.0)
+                if (value > 0.0 && value < 10000000.1)
                     lifeInsurance = value;
                 else
                     lifeInsurance = 0.0;
@@ -73,15 +82,15 @@ namespace CEIS209_PayRoll_Project
         //************************************
         //**************VACATION**************
         //************************************
-        public double Vacation
+        public int Vacation
         {
             get { return vacation; }
             set
             {
-                if (value > 0 && value <= 40)
-                    lifeInsurance = value;
+                if (value > 0 && value < 41)
+                    vacation = value;
                 else
-                    lifeInsurance = 0;
+                    vacation = 0;
             }
         }
     }

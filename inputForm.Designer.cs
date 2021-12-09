@@ -130,7 +130,7 @@
             // 
             this.submitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.submitButton.Location = new System.Drawing.Point(22, 364);
+            this.submitButton.Location = new System.Drawing.Point(12, 364);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(226, 64);
             this.submitButton.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.exitButton.Location = new System.Drawing.Point(254, 364);
+            this.exitButton.Location = new System.Drawing.Point(244, 364);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(226, 64);
             this.exitButton.TabIndex = 11;
@@ -158,7 +158,7 @@
             this.benefitsGroupBox.Controls.Add(this.lifeINSLabel);
             this.benefitsGroupBox.Controls.Add(this.vacationTextBox);
             this.benefitsGroupBox.Controls.Add(this.vacationDayLabel);
-            this.benefitsGroupBox.Location = new System.Drawing.Point(23, 201);
+            this.benefitsGroupBox.Location = new System.Drawing.Point(12, 201);
             this.benefitsGroupBox.Name = "benefitsGroupBox";
             this.benefitsGroupBox.Size = new System.Drawing.Size(465, 150);
             this.benefitsGroupBox.TabIndex = 6;
@@ -232,7 +232,7 @@
             this.employeeInfoGroupBox.Controls.Add(this.ssnTextBox);
             this.employeeInfoGroupBox.Controls.Add(this.lastNameLabel);
             this.employeeInfoGroupBox.Controls.Add(this.lastNameTextBox);
-            this.employeeInfoGroupBox.Location = new System.Drawing.Point(23, 6);
+            this.employeeInfoGroupBox.Location = new System.Drawing.Point(12, 6);
             this.employeeInfoGroupBox.Name = "employeeInfoGroupBox";
             this.employeeInfoGroupBox.Size = new System.Drawing.Size(465, 189);
             this.employeeInfoGroupBox.TabIndex = 1;
@@ -244,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(503, 439);
+            this.ClientSize = new System.Drawing.Size(482, 439);
             this.Controls.Add(this.employeeInfoGroupBox);
             this.Controls.Add(this.benefitsGroupBox);
             this.Controls.Add(this.exitButton);
@@ -264,7 +264,6 @@
         private System.Windows.Forms.Label ssnLabel;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Label firstNameLabel;
-        private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button exitButton;
         public System.Windows.Forms.TextBox hireDateTextBox;
         public System.Windows.Forms.TextBox ssnTextBox;
@@ -278,5 +277,6 @@
         public System.Windows.Forms.TextBox vacationTextBox;
         private System.Windows.Forms.Label vacationDayLabel;
         private System.Windows.Forms.GroupBox employeeInfoGroupBox;
+        public System.Windows.Forms.Button submitButton;
     }
 }
