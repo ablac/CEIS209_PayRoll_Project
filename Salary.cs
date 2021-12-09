@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//****************************************************************************************************************
+//*****************************************************SALARY*****************************************************
+//****************************************************************************************************************
 namespace CEIS209_PayRoll_Project
 {
     internal class Salary : Employee
@@ -29,7 +31,7 @@ namespace CEIS209_PayRoll_Project
         }
 
         //*************************************************************
-        //*************************BEHAVIORS**************************
+        //*************************BEHAVIORS***************************
         //*************************************************************
 
         public override string ToString()
@@ -37,6 +39,9 @@ namespace CEIS209_PayRoll_Project
             return base.ToString() + $", Salary {annualSalary.ToString("C")}";
         }
 
+        //************************************
+        //************CALCULATE PAY***********
+        //************************************
         public override double CalculatePay()
         {
             return annualSalary / 26.0;
