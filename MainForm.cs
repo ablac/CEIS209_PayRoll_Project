@@ -37,12 +37,33 @@ namespace CEIS209_PayRoll_Project
 
                 //Get Benefits Information
                 string healthINS = frmInput.healthINSTextBox.Text;
-                double lifeINS = Double.Parse( frmInput.lifeINSTextBox.Text );
+                double lifeINS = Double.Parse(frmInput.lifeINSTextBox.Text);
                 int vacation = Int32.Parse(frmInput.vacationTextBox.Text);
 
                 Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
+                Employee emp;
 
-                Employee emp = new Employee(fName, lName, ssn, hireDate, benefits);
+                //Check if employee is Hourly/Salary
+                if (frmInput.hourlyRadioButton.Checked == true)
+                {
+                    //Get Hourly Items
+                    float hourlyRate = float.Parse(frmInput.pay1TextBox.Text);
+                    float hoursWorked = float.Parse(frmInput.pay2TextBox.Text);
+
+                    emp = new Hourly(fName, lName, ssn, hireDate, benefits, hourlyRate, hoursWorked);
+                }
+                else if (frmInput.salaryRadioButton.Checked == true)
+                {
+                    //Get Salary Items
+                    double salary = double.Parse(frmInput.pay1TextBox.Text);
+
+                    emp = new Salary(fName, lName, ssn, hireDate, benefits, salary);
+                }
+                else
+                {
+                    displayLabel.Text = "Error, Invalid Employee Type.";
+                    return;
+                }
 
                 //Add Employee Object to List
                 EmployeesListBox.Items.Add(emp);

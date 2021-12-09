@@ -47,7 +47,7 @@
             this.EmployeesListBox.ItemHeight = 37;
             this.EmployeesListBox.Location = new System.Drawing.Point(20, 50);
             this.EmployeesListBox.Name = "EmployeesListBox";
-            this.EmployeesListBox.Size = new System.Drawing.Size(735, 263);
+            this.EmployeesListBox.Size = new System.Drawing.Size(837, 263);
             this.EmployeesListBox.TabIndex = 99999;
             this.EmployeesListBox.DoubleClick += new System.EventHandler(this.EmployeesListBox_DoubleClick);
             // 
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(775, 349);
+            this.ClientSize = new System.Drawing.Size(869, 349);
             this.Controls.Add(this.displayLabel);
             this.Controls.Add(this.EmployeesListBox);
             this.Controls.Add(this.label4);
