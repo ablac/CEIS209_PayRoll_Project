@@ -51,7 +51,7 @@ namespace CEIS209_PayRoll_Project
         public override string ToString()
         {
             //Name, SSS: (Number), Hire Date: (Date)
-            return $"{firstName} {lastName}, SSN: {ssn}, Hire Date: {hireDate.ToShortDateString()}";
+            return $"{firstName} {lastName}, SSN: {ssn}, Hiredate: {hireDate.ToShortDateString()}";
         }
         //************************************
         //***********CALCULATE PAY************
