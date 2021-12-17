@@ -42,12 +42,13 @@
             // EmployeesListBox
             // 
             this.EmployeesListBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.EmployeesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.EmployeesListBox.FormattingEnabled = true;
-            this.EmployeesListBox.ItemHeight = 37;
+            this.EmployeesListBox.HorizontalScrollbar = true;
+            this.EmployeesListBox.ItemHeight = 29;
             this.EmployeesListBox.Location = new System.Drawing.Point(20, 50);
             this.EmployeesListBox.Name = "EmployeesListBox";
-            this.EmployeesListBox.Size = new System.Drawing.Size(837, 263);
+            this.EmployeesListBox.Size = new System.Drawing.Size(837, 236);
             this.EmployeesListBox.TabIndex = 99999;
             this.EmployeesListBox.DoubleClick += new System.EventHandler(this.EmployeesListBox_DoubleClick);
             // 

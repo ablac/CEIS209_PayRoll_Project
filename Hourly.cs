@@ -41,7 +41,7 @@ namespace CEIS209_PayRoll_Project
 
         public override string ToString()
         {
-            return base.ToString() + $", HourlyRate: {hourlyRate.ToString("C")}, Hoursworked: {hoursWorked.ToString()}";
+            return base.ToString() + $", Rate: {hourlyRate.ToString("C")}, Hours: {hoursWorked.ToString()}";
         }
         //************************************
         //***********CALCULATE PAY************
