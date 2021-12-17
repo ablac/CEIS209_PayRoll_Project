@@ -40,7 +40,7 @@ namespace CEIS209_PayRoll_Project
         //************************************
         private void ReadEmpsFromFile()
         {
-            if (File.Exists(FILENAME))
+            if (File.Exists(FILENAME) && new FileInfo(FILENAME).Length > 0)
             {
                 //Open/Translate FIle
                 FileStream fs = new FileStream(FILENAME, FileMode.Open);
