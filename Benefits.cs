@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace CEIS209_PayRoll_Project
 {
+    [Serializable]
     internal class Benefits
     {
         //*************************************************************
