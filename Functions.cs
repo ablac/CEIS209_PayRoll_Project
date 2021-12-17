@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary; //Translator to Binary
 //****************************************************************************************************************
 //****************************************************FUNCTIONS***************************************************
 //****************************************************************************************************************
@@ -8,66 +10,58 @@ namespace CEIS209_PayRoll_Project
     public partial class MainForm
     {
         //FileName for Saved Data
-        private const String FILENAME = "Employees.csv";
+        private const String FILENAME = "Employees.dat";
         //************************************
         //***********WRITE TO FILE************
         //************************************
         private void WriteEmpsToFile(string message)
         {
-            //Open File
-            StreamWriter sw = new StreamWriter(FILENAME);
-            using (sw)
-            {
-                //Write Employee Objects to file
-                foreach (Employee temp in EmployeesListBox.Items)
-                {
-                    //Write to File
-                    sw.WriteLine(temp.FirstName + ',' + temp.LastName + ',' + temp.SSN + ','
-                        + temp.HireDate.ToShortDateString() + ',' 
-                        + temp.BenefitsPackage.HealthInsurance + ',' + temp.BenefitsPackage.LifeInsurance 
-                        + ',' + temp.BenefitsPackage.Vacation);
+            //Convert the listbox items - Generic Collection
+            List<Employee> emplist = new List<Employee>();
 
-                    //Display Message to user
-                    displayLabel.Text = $"{message}";
-                }
+            foreach (Employee emp in EmployeesListBox.Items)
+            {
+                emplist.Add(emp);
             }
+
+            //Open/Create File
+            FileStream fs = new FileStream(FILENAME, FileMode.Create);
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            //write the Generic List to file
+            formatter.Serialize(fs, emplist);
+
+            //Save/Close FIle
+            fs.Close();
+            displayLabel.Text = $"{message}";
         }
         //************************************
         //*************READ FILE**************
         //************************************
         private void ReadEmpsFromFile()
         {
-            //Read all employee data from file
-            StreamReader sr = new StreamReader(FILENAME);
-
-            using (sr)
+            if (File.Exists(FILENAME))
             {
-                while (sr.Peek() != -1)
+                //Open/Translate FIle
+                FileStream fs = new FileStream(FILENAME, FileMode.Open);
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                //Read all employee Data
+                List<Employee> emplist = (List<Employee>)formatter.Deserialize(fs);
+
+                //Close the File
+                fs.Close();
+
+                //Copy Employee Objects -> Listbox
+                foreach( Employee emp in emplist)
                 {
-                    //Read line, and break into parts
-                    string line = sr.ReadLine();
-
-                    //Split Data
-                    string[] parts = line.Split(',');
-
-                    //Import EMP Data
-                    string fName = parts[0];
-                    string lName = parts[1];
-                    string ssn = parts[2];
-                    DateTime hireDate = DateTime.Parse(parts[3]);
-                    //Import Benefits
-                    string healthINS = parts[4];
-                    double lifeINS = Double.Parse(parts[5]);
-                    int vacation = Int32.Parse(parts[6]);
-
-                    //Create Employee Object
-                    Employee emp = new Employee(fName, lName, ssn, hireDate, 
-                        new Benefits(healthINS, lifeINS, vacation));
                     EmployeesListBox.Items.Add(emp);
-
-                    //Display message to user
-                    displayLabel.Text = $"{FILENAME} loaded successfully!";
                 }
+                displayLabel.Text = $"Loaded {FILENAME} - Successfully";
+            }
+            else
+            {
+                displayLabel.Text = $"{FILENAME} not found!";
             }
         }
         //************************************
