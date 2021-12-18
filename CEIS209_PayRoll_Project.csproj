@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Benefits.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Functions1.cs">
+    <Compile Include="Functions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hourly.cs" />
