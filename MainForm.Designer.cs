@@ -48,7 +48,7 @@
             this.EmployeesListBox.ItemHeight = 29;
             this.EmployeesListBox.Location = new System.Drawing.Point(20, 50);
             this.EmployeesListBox.Name = "EmployeesListBox";
-            this.EmployeesListBox.Size = new System.Drawing.Size(837, 236);
+            this.EmployeesListBox.Size = new System.Drawing.Size(837, 265);
             this.EmployeesListBox.TabIndex = 99999;
             this.EmployeesListBox.DoubleClick += new System.EventHandler(this.EmployeesListBox_DoubleClick);
             // 

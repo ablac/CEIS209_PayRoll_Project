@@ -44,7 +44,7 @@ namespace CEIS209_PayRoll_Project
                 Employee emp;
 
                 //Check if employee is Hourly/Salary
-                if (frmInput.hourlyRadioButton.Checked == true)
+                if (frmInput.hourlyRadioButton.Checked)
                 {
                     //Get Hourly Items
                     float hourlyRate = float.Parse(frmInput.pay1TextBox.Text);
@@ -52,10 +52,10 @@ namespace CEIS209_PayRoll_Project
 
                     emp = new Hourly(fName, lName, ssn, hireDate, benefits, hourlyRate, hoursWorked);
                 }
-                else if (frmInput.salaryRadioButton.Checked == true)
+                else if (frmInput.salaryRadioButton.Checked)
                 {
                     //Get Salary Items
-                    double salary = double.Parse(frmInput.pay1TextBox.Text);
+                    double salary = Double.Parse(frmInput.pay1TextBox.Text);
 
                     emp = new Salary(fName, lName, ssn, hireDate, benefits, salary);
                 }
@@ -103,7 +103,9 @@ namespace CEIS209_PayRoll_Project
             displayLabel.Text = "Printing paychecks for all employees!";
             Employee emp = new Employee();
         }
-
+        //************************************
+        //*************EDIT CLICK*************
+        //************************************
         private void EmployeesListBox_DoubleClick(object sender, EventArgs e)
         {
             //Edit Selected Employee in the list box.
@@ -137,6 +139,22 @@ namespace CEIS209_PayRoll_Project
                 frmUpdate.lifeINSTextBox.Text = emp.BenefitsPackage.LifeInsurance.ToString("C2");
                 frmUpdate.vacationTextBox.Text = emp.BenefitsPackage.Vacation.ToString();
 
+
+                //Check Salary/Hourly
+                if (emp is Hourly)
+                {
+                    Hourly hrly = (Hourly)emp;
+                    frmUpdate.hourlyRadioButton.Checked = true;
+                    frmUpdate.pay1TextBox.Text = hrly.HourlyRate.ToString("N2");
+                    frmUpdate.pay2TextBox.Text = hrly.HoursWorked.ToString("N1");
+                }
+                else if (emp is Salary)
+                {
+                    Salary sal = (Salary)emp;
+                    frmUpdate.salaryRadioButton.Checked = true;
+                    frmUpdate.pay1TextBox.Text = sal.AnnualSalary.ToString("N2");
+                }
+
                 //Update Form Title
                 frmUpdate.Text = $"{emp.FirstName} {emp.LastName} Update Form";
 
@@ -167,7 +185,20 @@ namespace CEIS209_PayRoll_Project
                 int vacation = Int32.Parse(frmUpdate.vacationTextBox.Text);
 
                 Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
-                emp = new Employee(fName, lName, ssn, hireDate, benefits);
+
+                if (frmUpdate.hourlyRadioButton.Checked)
+                {
+                    float rate = float.Parse(frmUpdate.pay1TextBox.Text);
+                    float hours = float.Parse(frmUpdate.pay2TextBox.Text);
+
+                    emp = new Hourly(fName, lName, ssn, hireDate, benefits, rate, hours);
+                }
+                else if (frmUpdate.salaryRadioButton.Checked)
+                {
+                    double salary = Double.Parse(frmUpdate.pay1TextBox.Text);
+
+                    emp = new Salary(fName, lName, ssn, hireDate, benefits, salary);
+                }
 
                 //Add Employee Object to List
                 EmployeesListBox.Items.Add(emp);
