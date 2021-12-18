@@ -57,7 +57,7 @@ namespace CEIS209_PayRoll_Project
                 fs.Close();
 
                 //Copy Employee Objects -> Listbox
-                foreach( Employee emp in emplist)
+                foreach (Employee emp in emplist)
                 {
                     EmployeesListBox.Items.Add(emp);
                 }
