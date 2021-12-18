@@ -7,10 +7,8 @@ using System.Runtime.Serialization.Formatters.Binary; //Translator to Binary
 //****************************************************************************************************************
 namespace CEIS209_PayRoll_Project
 {
-    public partial class messageLogForm
+    public partial class MainForm
     {
-        private System.Windows.Forms.ListBox messageLog;
-
         //FileName for Saved Data
         private const String FILENAME = "Employees.dat";
         //************************************

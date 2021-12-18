@@ -16,7 +16,7 @@ namespace CEIS209_PayRoll_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new messageLogForm());
+            Application.Run(new MainForm());
         }
     }
 }
