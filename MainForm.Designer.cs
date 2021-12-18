@@ -1,6 +1,6 @@
 ﻿namespace CEIS209_PayRoll_Project
 {
-    partial class MainForm
+    partial class messageLogForm
     {
         /// <summary>
         /// Required designer variable.
