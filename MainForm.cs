@@ -102,8 +102,10 @@ namespace CEIS209_PayRoll_Project
             //Print Paychecks
             foreach (Employee emp in EmployeesListBox.Items)
             {
-                string output = $"{emp.FirstName} {emp.LastName} \n SSN: {emp.SSN}" +
-                    $"\n Hiredate: {emp.HireDate.ToShortDateString()}\n Pay Amount: {emp.CalculatePay().ToString("F2")}";
+                string output = $"{emp.FirstName} {emp.LastName} " +
+                    $"\n SSN: {emp.SSN}" +
+                    $"\n Hiredate: {emp.HireDate.ToShortDateString()}" +
+                    $"\n Pay Amount: {emp.CalculatePay().ToString("F2")}";
 
                 MessageBox.Show(output);
             }
