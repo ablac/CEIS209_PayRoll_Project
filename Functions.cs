@@ -16,13 +16,16 @@ namespace CEIS209_PayRoll_Project
         //************************************
         private void WriteEmpsToFile(string message)
         {
+            displayLabel.Text = $"Searching for {FILENAME}";
             //Convert the listbox items - Generic Collection
             List<Employee> emplist = new List<Employee>();
 
             foreach (Employee emp in EmployeesListBox.Items)
             {
                 emplist.Add(emp);
+                displayLabel.Text = "Update Employee Data";
             }
+            displayLabel.Text = "Update Employee Data Successful";
 
             //Open/Create File
             FileStream fs = new FileStream(FILENAME, FileMode.Create);
@@ -42,6 +45,7 @@ namespace CEIS209_PayRoll_Project
         {
             if (File.Exists(FILENAME) && new FileInfo(FILENAME).Length > 0)
             {
+                displayLabel.Text = $"Searching for {FILENAME}";
                 //Open/Translate FIle
                 FileStream fs = new FileStream(FILENAME, FileMode.Open);
                 BinaryFormatter formatter = new BinaryFormatter();

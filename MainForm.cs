@@ -34,6 +34,7 @@ namespace CEIS209_PayRoll_Project
                 string ssn = frmInput.ssnTextBox.Text;
                 string date = frmInput.hireDateTextBox.Text;
                 DateTime hireDate = DateTime.Parse(date);
+                displayLabel.Text = "Update Employee Data";
 
                 //Get Benefits Information
                 string healthINS = frmInput.healthINSTextBox.Text;
@@ -42,6 +43,7 @@ namespace CEIS209_PayRoll_Project
 
                 Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
                 Employee emp;
+                displayLabel.Text = "Update Employee Benefits";
 
                 //Check if employee is Hourly/Salary
                 if (frmInput.hourlyRadioButton.Checked)
@@ -51,6 +53,7 @@ namespace CEIS209_PayRoll_Project
                     float hoursWorked = float.Parse(frmInput.pay2TextBox.Text);
 
                     emp = new Hourly(fName, lName, ssn, hireDate, benefits, hourlyRate, hoursWorked);
+                    displayLabel.Text = "Update Employee Hourly";
                 }
                 else if (frmInput.salaryRadioButton.Checked)
                 {
@@ -58,6 +61,7 @@ namespace CEIS209_PayRoll_Project
                     double salary = Double.Parse(frmInput.pay1TextBox.Text);
 
                     emp = new Salary(fName, lName, ssn, hireDate, benefits, salary);
+                    displayLabel.Text = "Update Employee Salary";
                 }
                 else
                 {
@@ -107,9 +111,10 @@ namespace CEIS209_PayRoll_Project
                     $"\n Hiredate: {emp.HireDate.ToShortDateString()}" +
                     $"\n Pay Amount: {emp.CalculatePay().ToString("F2")}";
 
+                displayLabel.Text = $"Displaying Paycheck for {emp.FirstName}";
                 MessageBox.Show(output);
             }
-            displayLabel.Text = "Printing paychecks for all employees!";
+            displayLabel.Text = "Finished Printing paychecks for all employees!";
             
         }
         //************************************
@@ -142,11 +147,13 @@ namespace CEIS209_PayRoll_Project
                 frmUpdate.lastNameTextBox.Text = emp.LastName;
                 frmUpdate.ssnTextBox.Text = emp.SSN;
                 frmUpdate.hireDateTextBox.Text = emp.HireDate.ToShortDateString();
+                displayLabel.Text = "Imported Employee Data";
 
                 //Import Benefits
                 frmUpdate.healthINSTextBox.Text = emp.BenefitsPackage.HealthInsurance;
                 frmUpdate.lifeINSTextBox.Text = emp.BenefitsPackage.LifeInsurance.ToString("C2");
                 frmUpdate.vacationTextBox.Text = emp.BenefitsPackage.Vacation.ToString();
+                displayLabel.Text = "Imported Employee Benefits";
 
 
                 //Check Salary/Hourly
@@ -156,12 +163,14 @@ namespace CEIS209_PayRoll_Project
                     frmUpdate.hourlyRadioButton.Checked = true;
                     frmUpdate.pay1TextBox.Text = hrly.HourlyRate.ToString("N2");
                     frmUpdate.pay2TextBox.Text = hrly.HoursWorked.ToString("N1");
+                    displayLabel.Text = "Imported Employee Hourly";
                 }
                 else if (emp is Salary)
                 {
                     Salary sal = (Salary)emp;
                     frmUpdate.salaryRadioButton.Checked = true;
                     frmUpdate.pay1TextBox.Text = sal.AnnualSalary.ToString("N2");
+                    displayLabel.Text = "Imported Employee Salary";
                 }
 
                 //Update Form Title
@@ -171,7 +180,10 @@ namespace CEIS209_PayRoll_Project
 
                 //End Method if user cancles Update
                 if (result == DialogResult.Cancel)
+                {
+                    displayLabel.Text = "Canceled by User";
                     return;
+                }
 
                 //Remove Old Data
                 EmployeesListBox.Items.RemoveAt(itemNumber);
@@ -182,6 +194,7 @@ namespace CEIS209_PayRoll_Project
                 string ssn = frmUpdate.ssnTextBox.Text;
                 string date = frmUpdate.hireDateTextBox.Text;
                 DateTime hireDate = DateTime.Parse(date);
+                displayLabel.Text = "Update Employee Data";
 
                 //Get Benefits Information
                 string healthINS = frmUpdate.healthINSTextBox.Text;
@@ -192,6 +205,7 @@ namespace CEIS209_PayRoll_Project
                 double lifeINS = Double.Parse(lifeINSString);
 
                 int vacation = Int32.Parse(frmUpdate.vacationTextBox.Text);
+                displayLabel.Text = "Update Employee Benefits";
 
                 Benefits benefits = new Benefits(healthINS, lifeINS, vacation);
 
@@ -201,12 +215,14 @@ namespace CEIS209_PayRoll_Project
                     float hours = float.Parse(frmUpdate.pay2TextBox.Text);
 
                     emp = new Hourly(fName, lName, ssn, hireDate, benefits, rate, hours);
+                    displayLabel.Text = "Update Employee Hourly";
                 }
                 else if (frmUpdate.salaryRadioButton.Checked)
                 {
                     double salary = Double.Parse(frmUpdate.pay1TextBox.Text);
 
                     emp = new Salary(fName, lName, ssn, hireDate, benefits, salary);
+                    displayLabel.Text = "Update Employee Salary";
                 }
 
                 //Add Employee Object to List
